@@ -1,0 +1,606 @@
+@charset "UTF-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+ .theme-default {
+  --background-image-light: url("/full-header-light.png");
+  --color-background-light: 244 252 239;
+  --color-on-background-light: 23 29 22;
+  --color-surface-bg-light: 244 252 239;
+  --color-surface-dim-light: 213 220 208;
+  --color-surface-bright-light: 244 252 239;
+  --color-surface-lowest-light: 255 255 255;
+  --color-surface-low-light: 239 246 233;
+  --color-surface-light: 233 240 228;
+  --color-surface-high-light: 227 234 222;
+  --color-surface-highest-light: 221 229 217;
+  --color-on-surface-light: 23 29 22;
+  --color-surface-variant-light: 217 230 212;
+  --color-on-surface-variant-light: 62 74 60;
+  --color-inverse-surface-light: 43 50 42;
+  --color-inverse-on-surface-light: 236 243 231;
+  --color-outline-light: 110 123 107;
+  --color-outline-variant-light: 189 202 185;
+  --color-shadow-light: 0 0 0;
+  --color-scrim-light: 0 0 0;
+  --color-surface-tint-light: 0 110 37;
+  --color-primary-light: 0 93 30;
+  --color-on-primary-light: 255 255 255;
+  --color-primary-container-light: 0 135 48;
+  --color-on-primary-container-light: 255 255 255;
+  --color-inverse-primary-light: 103 223 117;
+  --color-secondary-light: 59 104 62;
+  --color-on-secondary-light: 255 255 255;
+  --color-secondary-container-light: 193 244 189;
+  --color-on-secondary-container-light: 39 84 43;
+  --color-tertiary-light: 57 101 107;
+  --color-on-tertiary-light: 255 255 255;
+  --color-tertiary-container-light: 188 235 242;
+  --color-on-tertiary-container-light: 0 31 35;
+  --color-error-light: 186 26 26;
+  --color-on-error-light: 255 255 255;
+  --color-error-container-light: 255 218 214;
+  --color-on-error-container-light: 65 0 2;
+
+  --background-image-dark: url("/full-header.png");
+  --color-background-dark: 15 21 14;
+  --color-on-background-dark: 221 229 217;
+  --color-surface-bg-dark: 15 21 14;
+  --color-surface-dim-dark: 15 21 14;
+  --color-surface-bright-dark: 52 59 51;
+  --color-surface-lowest-dark: 9 16 9;
+  --color-surface-low-dark: 23 29 22;
+  --color-surface-dark: 27 33 26;
+  --color-surface-high-dark: 37 44 36;
+  --color-surface-highest-dark: 48 55 46;
+  --color-on-surface-dark: 221 229 217;
+  --color-surface-variant-dark: 62 74 60;
+  --color-on-surface-variant-dark: 189 202 185;
+  --color-inverse-surface-dark: 221 229 217;
+  --color-inverse-on-surface-dark: 43 50 42;
+  --color-outline-dark: 135 148 132;
+  --color-outline-variant-dark: 62 74 60;
+  --color-shadow-dark: 0 0 0;
+  --color-scrim-dark: 0 0 0;
+  --color-surface-tint-dark: 103 223 117;
+  --color-primary-dark: 103 223 117;
+  --color-on-primary-dark: 0 57 15;
+  --color-primary-container-dark: 0 135 48;
+  --color-on-primary-container-dark: 255 255 255;
+  --color-inverse-primary-dark: 0 110 37;
+  --color-secondary-dark: 161 211 159;
+  --color-on-secondary-dark: 10 57 19;
+  --color-secondary-container-dark: 28 72 33;
+  --color-on-secondary-container-dark: 174 225 172;
+  --color-tertiary-dark: 161 206 213;
+  --color-on-tertiary-dark: 0 54 60;
+  --color-tertiary-container-dark: 31 77 83;
+  --color-on-tertiary-container-dark: 188 235 242;
+  --color-error-dark: 255 180 171;
+  --color-on-error-dark: 105 0 5;
+  --color-error-container-dark: 147 0 10;
+  --color-on-error-container-dark: 255 218 214;
+ }
+ .theme-purple {
+  --background-image-light: url("/full-header-light-ungu.png");
+  --color-background-light: 255 247 249;
+  --color-on-background-light: 32 26 30;
+  --color-surface-bg-light: 255 247 249;
+  --color-surface-dim-light: 228 215 220;
+  --color-surface-bright-light: 255 247 249;
+  --color-surface-lowest-light: 255 255 255;
+  --color-surface-low-light: 254 240 246;
+  --color-surface-light: 248 234 240;
+  --color-surface-high-light: 242 229 235;
+  --color-surface-highest-light: 236 223 229;
+  --color-on-surface-light: 32 26 30;
+  --color-surface-variant-light: 241 221 232;
+  --color-on-surface-variant-light: 80 67 76;
+  --color-inverse-surface-light: 54 46 51;
+  --color-inverse-on-surface-light: 251 237 243;
+  --color-outline-light: 131 115 124;
+  --color-outline-variant-light: 212 193 204;
+  --color-shadow-light: 0 0 0;
+  --color-scrim-light: 0 0 0;
+  --color-surface-tint-light: 142 66 128;
+  --color-primary-light: 102 31 91;
+  --color-on-primary-light: 255 255 255;
+  --color-primary-container-light: 144 67 129;
+  --color-on-primary-container-light: 255 255 255;
+  --color-inverse-primary-light: 255 172 234;
+  --color-secondary-light: 119 83 109;
+  --color-on-secondary-light: 255 255 255;
+  --color-secondary-container-light: 255 213 240;
+  --color-on-secondary-container-light: 94 60 85;
+  --color-tertiary-light: 112 31 34;
+  --color-on-tertiary-light: 255 255 255;
+  --color-tertiary-container-light: 158 65 65;
+  --color-on-tertiary-container-light: 255 255 255;
+  --color-error-light: 186 26 26;
+  --color-on-error-light: 255 255 255;
+  --color-error-container-light: 255 218 214;
+  --color-on-error-container-light: 65 0 2;
+
+  --background-image-dark: url("/full-header-ungu.png");
+  --color-background-dark: 24 18 22;
+  --color-on-background-dark: 236 223 229;
+  --color-surface-bg-dark: 24 18 22;
+  --color-surface-dim-dark: 24 18 22;
+  --color-surface-bright-dark: 63 55 60;
+  --color-surface-lowest-dark: 18 12 16;
+  --color-surface-low-dark: 32 26 30;
+  --color-surface-dark: 36 30 34;
+  --color-surface-high-dark: 47 40 44;
+  --color-surface-highest-dark: 58 51 55;
+  --color-on-surface-dark: 236 223 229;
+  --color-surface-variant-dark: 80 67 76;
+  --color-on-surface-variant-dark: 212 193 204;
+  --color-inverse-surface-dark: 236 223 229;
+  --color-inverse-on-surface-dark: 54 46 51;
+  --color-outline-dark: 157 140 150;
+  --color-outline-variant-dark: 80 67 76;
+  --color-shadow-dark: 0 0 0;
+  --color-scrim-dark: 0 0 0;
+  --color-surface-tint-dark: 255 172 234;
+  --color-primary-dark: 255 172 234;
+  --color-on-primary-dark: 87 16 78;
+  --color-primary-container-dark: 116 43 104;
+  --color-on-primary-container-dark: 255 214 241;
+  --color-inverse-primary-dark: 142 66 128;
+  --color-secondary-dark: 230 185 216;
+  --color-on-secondary-dark: 69 38 62;
+  --color-secondary-container-dark: 86 53 78;
+  --color-on-secondary-container-dark: 245 200 230;
+  --color-tertiary-dark: 255 179 176;
+  --color-on-tertiary-dark: 96 19 23;
+  --color-tertiary-container-dark: 127 42 44;
+  --color-on-tertiary-container-dark: 255 216 214;
+  --color-error-dark: 255 180 171;
+  --color-on-error-dark: 105 0 5;
+  --color-error-container-dark: 147 0 10;
+  --color-on-error-container-dark: 255 218 214;
+ }
+ .theme-yellow {
+  --background-image-light: url("/full-header-light-kuning.png");
+  --color-background-light: 255 248 242;
+  --color-on-background-light: 31 27 19;
+  --color-surface-bg-light: 255 248 242;
+  --color-surface-dim-light: 226 217 204;
+  --color-surface-bright-light: 255 248 242;
+  --color-surface-lowest-light: 255 255 255;
+  --color-surface-low-light: 252 242 229;
+  --color-surface-light: 246 237 223;
+  --color-surface-high-light: 240 231 218;
+  --color-surface-highest-light: 234 225 212;
+  --color-on-surface-light: 31 27 19;
+  --color-surface-variant-light: 238 225 203;
+  --color-on-surface-variant-light: 78 70 53;
+  --color-inverse-surface-light: 52 48 39;
+  --color-inverse-on-surface-light: 249 239 226;
+  --color-outline-light: 128 118 99;
+  --color-outline-variant-light: 209 197 176;
+  --color-shadow-light: 0 0 0;
+  --color-scrim-light: 0 0 0;
+  --color-surface-tint-light: 119 90 0;
+  --color-primary-light: 101 76 0;
+  --color-on-primary-light: 255 255 255;
+  --color-primary-container-light: 146 112 0;
+  --color-on-primary-container-light: 255 255 255;
+  --color-inverse-primary-light: 238 193 77;
+  --color-secondary-light: 111 92 48;
+  --color-on-secondary-light: 255 255 255;
+  --color-secondary-container-light: 254 228 172;
+  --color-on-secondary-container-light: 89 72 30;
+  --color-tertiary-light: 65 87 0;
+  --color-on-tertiary-light: 255 255 255;
+  --color-tertiary-container-light: 100 125 34;
+  --color-on-tertiary-container-light: 255 255 255;
+  --color-error-light: 186 26 26;
+  --color-on-error-light: 255 255 255;
+  --color-error-container-light: 255 218 214;
+  --color-on-error-container-light: 65 0 2;
+
+  --background-image-dark: url("/full-header-kuning.png");
+  --color-background-dark: 22 19 12;
+  --color-on-background-dark: 234 225 212;
+  --color-surface-bg-dark: 22 19 12;
+  --color-surface-dim-dark: 22 19 12;
+  --color-surface-bright-dark: 61 57 48;
+  --color-surface-lowest-dark: 17 14 7;
+  --color-surface-low-dark: 31 27 19;
+  --color-surface-dark: 35 31 23;
+  --color-surface-high-dark: 46 41 33;
+  --color-surface-highest-dark: 57 52 43;
+  --color-on-surface-dark: 234 225 212;
+  --color-surface-variant-dark: 78 70 53;
+  --color-on-surface-variant-dark: 209 197 176;
+  --color-inverse-surface-dark: 234 225 212;
+  --color-inverse-on-surface-dark: 52 48 39;
+  --color-outline-dark: 154 144 124;
+  --color-outline-variant-dark: 78 70 53;
+  --color-shadow-dark: 0 0 0;
+  --color-scrim-dark: 0 0 0;
+  --color-surface-tint-dark: 238 193 77;
+  --color-primary-dark: 238 193 77;
+  --color-on-primary-dark: 62 46 0;
+  --color-primary-container-dark: 146 112 0;
+  --color-on-primary-container-dark: 255 255 255;
+  --color-inverse-primary-dark: 119 90 0;
+  --color-secondary-dark: 221 196 142;
+  --color-on-secondary-dark: 61 46 6;
+  --color-secondary-container-dark: 78 62 20;
+  --color-on-secondary-container-dark: 235 210 155;
+  --color-tertiary-dark: 180 209 109;
+  --color-on-tertiary-dark: 39 53 0;
+  --color-tertiary-container-dark: 100 125 34;
+  --color-on-tertiary-container-dark: 255 255 255;
+  --color-error-dark: 255 180 171;
+  --color-on-error-dark: 105 0 5;
+  --color-error-container-dark: 147 0 10;
+  --color-on-error-container-dark: 255 218 214;
+ }
+ .theme-red {
+  --background-image-light: url("/full-header-light-merah.png");
+  --color-background-light: 255 248 247;
+  --color-on-background-light: 41 23 22;
+  --color-surface-bg-light: 255 248 247;
+  --color-surface-dim-light: 245 210 208;
+  --color-surface-bright-light: 255 248 247;
+  --color-surface-lowest-light: 255 255 255;
+  --color-surface-low-light: 255 240 239;
+  --color-surface-light: 255 233 231;
+  --color-surface-high-light: 255 225 223;
+  --color-surface-highest-light: 254 218 216;
+  --color-on-surface-light: 41 23 22;
+  --color-surface-variant-light: 255 218 215;
+  --color-on-surface-variant-light: 94 63 61;
+  --color-inverse-surface-light: 64 43 42;
+  --color-inverse-on-surface-light: 255 237 235;
+  --color-outline-light: 147 110 108;
+  --color-outline-variant-light: 232 188 185;
+  --color-shadow-light: 0 0 0;
+  --color-scrim-light: 0 0 0;
+  --color-surface-tint-light: 191 0 35;
+  --color-primary-light: 164 0 28;
+  --color-on-primary-light: 255 255 255;
+  --color-primary-container-light: 232 8 46;
+  --color-on-primary-container-light: 255 255 255;
+  --color-inverse-primary-light: 255 179 175;
+  --color-secondary-light: 175 45 50;
+  --color-on-secondary-light: 255 255 255;
+  --color-secondary-container-light: 255 123 120;
+  --color-on-secondary-container-light: 58 0 4;
+  --color-tertiary-light: 123 65 0;
+  --color-on-tertiary-light: 255 255 255;
+  --color-tertiary-container-light: 177 95 0;
+  --color-on-tertiary-container-light: 255 255 255;
+  --color-error-light: 186 26 26;
+  --color-on-error-light: 255 255 255;
+  --color-error-container-light: 255 218 214;
+  --color-on-error-container-light: 65 0 2;
+
+  --background-image-dark: url("/full-header-merah.png");
+  --color-background-dark: 32 14 14;
+  --color-on-background-dark: 254 218 216;
+  --color-surface-bg-dark: 32 14 14;
+  --color-surface-dim-dark: 32 14 14;
+  --color-surface-bright-dark: 74 51 50;
+  --color-surface-lowest-dark: 26 9 9;
+  --color-surface-low-dark: 41 23 22;
+  --color-surface-dark: 46 26 26;
+  --color-surface-high-dark: 57 37 36;
+  --color-surface-highest-dark: 69 47 46;
+  --color-on-surface-dark: 254 218 216;
+  --color-surface-variant-dark: 94 63 61;
+  --color-on-surface-variant-dark: 232 188 185;
+  --color-inverse-surface-dark: 254 218 216;
+  --color-inverse-on-surface-dark: 64 43 42;
+  --color-outline-dark: 174 135 133;
+  --color-outline-variant-dark: 94 63 61;
+  --color-shadow-dark: 0 0 0;
+  --color-scrim-dark: 0 0 0;
+  --color-surface-tint-dark: 255 179 175;
+  --color-primary-dark: 255 179 175;
+  --color-on-primary-dark: 104 0 14;
+  --color-primary-container-dark: 232 8 46;
+  --color-on-primary-container-dark: 255 255 255;
+  --color-inverse-primary-dark: 191 0 35;
+  --color-secondary-dark: 255 179 175;
+  --color-on-secondary-dark: 104 0 14;
+  --color-secondary-container-dark: 129 5 22;
+  --color-on-secondary-container-dark: 255 196 193;
+  --color-tertiary-dark: 255 183 125;
+  --color-on-tertiary-dark: 77 38 0;
+  --color-tertiary-container-dark: 177 95 0;
+  --color-on-tertiary-container-dark: 255 255 255;
+  --color-error-dark: 255 180 171;
+  --color-on-error-dark: 105 0 5;
+  --color-error-container-dark: 147 0 10;
+  --color-on-error-container-dark: 255 218 214;
+ }
+ .theme-blue {
+  --background-image-light: url("/full-header-light-biru.png");
+  --color-background-light: 248 249 255;
+  --color-on-background-light: 24 28 34;
+  --color-surface-bg-light: 248 249 255;
+  --color-surface-dim-light: 215 218 226;
+  --color-surface-bright-light: 248 249 255;
+  --color-surface-lowest-light: 255 255 255;
+  --color-surface-low-light: 241 243 252;
+  --color-surface-light: 235 238 246;
+  --color-surface-high-light: 229 232 240;
+  --color-surface-highest-light: 224 226 235;
+  --color-on-surface-light: 24 28 34;
+  --color-surface-variant-light: 220 227 241;
+  --color-on-surface-variant-light: 64 71 82;
+  --color-inverse-surface-light: 45 49 55;
+  --color-inverse-on-surface-light: 238 241 249;
+  --color-outline-light: 112 119 132;
+  --color-outline-variant-light: 192 199 212;
+  --color-shadow-light: 0 0 0;
+  --color-scrim-light: 0 0 0;
+  --color-surface-tint-light: 0 96 168;
+  --color-primary-light: 0 82 144;
+  --color-on-primary-light: 255 255 255;
+  --color-primary-container-light: 0 119 206;
+  --color-on-primary-container-light: 255 255 255;
+  --color-inverse-primary-light: 162 201 255;
+  --color-secondary-light: 66 96 134;
+  --color-on-secondary-light: 255 255 255;
+  --color-secondary-container-light: 193 218 255;
+  --color-on-secondary-container-light: 36 67 103;
+  --color-tertiary-light: 120 44 151;
+  --color-on-tertiary-light: 255 255 255;
+  --color-tertiary-container-light: 161 84 191;
+  --color-on-tertiary-container-light: 255 255 255;
+  --color-error-light: 186 26 26;
+  --color-on-error-light: 255 255 255;
+  --color-error-container-light: 255 218 214;
+  --color-on-error-container-light: 65 0 2;
+
+  --background-image-dark: url("/full-header-biru.png");
+  --color-background-dark: 16 20 25;
+  --color-on-background-dark: 224 226 235;
+  --color-surface-bg-dark: 16 20 25;
+  --color-surface-dim-dark: 16 20 25;
+  --color-surface-bright-dark: 53 57 64;
+  --color-surface-lowest-dark: 10 14 20;
+  --color-surface-low-dark: 24 28 34;
+  --color-surface-dark: 28 32 38;
+  --color-surface-high-dark: 38 42 48;
+  --color-surface-highest-dark: 49 53 59;
+  --color-on-surface-dark: 224 226 235;
+  --color-surface-variant-dark: 64 71 82;
+  --color-on-surface-variant-dark: 192 199 212;
+  --color-inverse-surface-dark: 224 226 235;
+  --color-inverse-on-surface-dark: 45 49 55;
+  --color-outline-dark: 138 145 158;
+  --color-outline-variant-dark: 64 71 82;
+  --color-shadow-dark: 0 0 0;
+  --color-scrim-dark: 0 0 0;
+  --color-surface-tint-dark: 162 201 255;
+  --color-primary-dark: 162 201 255;
+  --color-on-primary-dark: 0 49 91;
+  --color-primary-container-dark: 0 119 206;
+  --color-on-primary-container-dark: 255 255 255;
+  --color-inverse-primary-dark: 0 96 168;
+  --color-secondary-dark: 170 201 243;
+  --color-on-secondary-dark: 15 50 85;
+  --color-secondary-container-dark: 34 65 101;
+  --color-on-secondary-container-dark: 187 215 255;
+  --color-tertiary-dark: 236 177 255;
+  --color-on-tertiary-dark: 82 0 112;
+  --color-tertiary-container-dark: 161 84 191;
+  --color-on-tertiary-container-dark: 255 255 255;
+  --color-error-dark: 255 180 171;
+  --color-on-error-dark: 105 0 5;
+  --color-error-container-dark: 147 0 10;
+  --color-on-error-container-dark: 255 218 214;
+ }
+}
+
+*::-webkit-scrollbar {
+ width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+ @apply bg-surface-light dark:bg-surface-dark;
+}
+
+*::-webkit-scrollbar-thumb {
+ @apply dark:bg-tertiary-dark bg-tertiary-light rounded-full;
+}
+
+.material-symbols-rounded {
+ font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.material-symbols-rounded:hover {
+ font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+h1 {
+ font-feature-settings: "ss01";
+}
+
+article h1 {
+ @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl dark:text-primary-dark text-primary-light my-4 font-semibold;
+}
+
+article h2 {
+ @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl dark:text-primary-dark text-primary-light my-4 font-semibold;
+}
+article h3 {
+ @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl dark:text-primary-dark text-primary-light my-4 font-semibold;
+}
+article h4 {
+ @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl dark:text-primary-dark text-primary-light my-4 font-semibold;
+}
+article h5 {
+ @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl dark:text-primary-dark text-primary-light my-4 font-semibold;
+}
+article h6 {
+ @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl dark:text-primary-dark text-primary-light my-4 font-semibold;
+}
+
+article a {
+ @apply underline decoration-2 font-semibold text-tertiary-light dark:text-tertiary-dark hover:text-tertiary-light/70 dark:hover:text-tertiary-dark/70 duration-300;
+}
+
+article em {
+ @apply font-bold dark:bg-tertiary-dark dark:text-on-tertiary-dark text-on-tertiary-light bg-tertiary-light px-1 rounded-sm;
+}
+
+article p {
+ @apply my-4 leading-relaxed sm:leading-normal md:leading-relaxed lg:leading-loose xl:leading-9 text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased  dark:text-on-background-dark text-on-background-light;
+}
+
+article ul {
+ @apply list-disc text-lg pl-12 my-4 space-y-2;
+ list-style-type: "📌  ";
+}
+
+article ul div {
+ @apply ms-2;
+}
+
+article ul li {
+ @apply dark:text-on-background-dark text-on-background-light text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased;
+}
+
+article ol {
+ @apply list-decimal text-lg pl-12 my-4 space-y-2;
+}
+
+article ol div {
+ @apply ms-2;
+}
+
+article ol li {
+ counter-increment: li;
+ display: list-item;
+ @apply dark:text-on-background-dark text-on-background-light text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased;
+}
+
+article ol li::marker {
+ display: none;
+ content: "#" counter(li) " ";
+ @apply dark:text-tertiary-dark text-tertiary-light;
+ font-weight: bold;
+}
+
+article .alert p {
+ @apply dark:bg-error-dark dark:text-on-error-dark bg-error-light text-on-error-light leading-6 font-extrabold border-none rounded-xl p-4;
+}
+
+article code {
+ @apply dark:bg-primary-container-dark bg-primary-container-light text-on-primary-container-light dark:text-on-primary-container-dark px-1 rounded-md text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl subpixel-antialiased font-mono;
+}
+
+article pre {
+ @apply p-4 rounded-3xl bg-surface-variant-dark text-on-primary-container-dark overflow-auto font-mono !important;
+}
+
+article pre::-webkit-scrollbar {
+ @apply overflow-hidden overflow-x-scroll;
+}
+
+article pre code {
+ @apply bg-transparent !important;
+}
+
+article table {
+ @apply block table-auto overflow-hidden overflow-x-scroll;
+}
+
+article table p {
+ @apply my-2 text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased;
+}
+
+article th {
+ @apply font-bold dark:bg-surface-low-dark bg-surface-low-light text-on-surface-variant-light dark:text-on-surface-variant-dark p-2 pl-4;
+}
+
+article tr {
+ @apply border-b border-outline-light dark:border-outline-dark;
+}
+
+article td {
+ @apply dark:bg-surface-dark bg-surface-light dark:text-on-background-dark text-on-background-light px-4 py-2;
+}
+
+article .table-wrapper {
+ @apply rounded-xl border overflow-hidden border-outline-light dark:border-outline-dark;
+}
+
+article blockquote {
+ @apply text-justify border-l-4 dark:border-outline-dark dark:text-tertiary-dark text-tertiary-light border-tertiary-light italic my-4 pl-8;
+ font-family: Georgia, Times, "Times New Roman", serif;
+ font-size: 1.25em;
+ font-style: italic;
+ line-height: 1.8em;
+ padding: 1em 2em;
+ position: relative;
+ transition: 0.2s border ease-in-out;
+ z-index: 0;
+}
+
+article blockquote::before {
+ @apply dark:bg-background-dark bg-background-light;
+ content: "";
+ position: absolute;
+ top: 50%;
+ left: -4px;
+ height: 2em;
+ width: 5px;
+ margin-top: -1em;
+}
+
+article blockquote::after {
+ @apply dark:text-tertiary-light text-tertiary-dark;
+ content: "”";
+ position: absolute;
+ top: 50%;
+ left: -0.5em;
+ font-size: 4em;
+ font-style: normal;
+ line-height: 1em;
+ text-align: center;
+ text-indent: -2px;
+ width: 1em;
+ margin-top: -0.2em;
+}
+
+article aside p {
+ @apply font-sans text-xl dark:text-primary-dark text-primary-light mb-0;
+}
+article aside div p {
+ @apply font-sans text-lg dark:text-primary-dark text-primary-light mt-0 mb-0;
+}
+
+/* TOC */
+
+#toc li {
+ @apply my-1;
+}
+#toc ul {
+ list-style: none;
+}
+#toc a {
+ @apply text-on-surface-light dark:text-on-surface-dark;
+ text-decoration: none;
+}
+#toc li.toc-level-3 {
+ margin-left: 2rem;
+}
+#toc li.toc-level-4 {
+ margin-left: 4rem;
+}
+#toc li.toc-level-5 {
+ margin-left: 6rem;
+}
+#toc li.toc-level-6 {
+ margin-left: 8rem;
+}

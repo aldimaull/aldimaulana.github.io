@@ -1,0 +1,27 @@
+---
+// layout import
+import Head from "./MainHead.astro";
+
+// styles
+import "../styles/global.css";
+import "@fontsource/plus-jakarta-sans";
+
+// props
+const { title, description, image, frontmatter, robots } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden md:overflow-visible theme-default">
+ <Head {title} {description} {image} {frontmatter} {robots} />
+ <body
+  class="overflow-x-hidden md:overflow-visible dark:bg-surface-dark bg-surface-light duration-500 h-full md:flex"
+ >
+  <header
+   class="md:dark:bg-surface-highest-dark md:bg-surface-highest-light border-r border-outline-light dark:border-outline-dark"
+  >
+  </header>
+  <main class="w-full">
+   <slot />
+  </main>
+ </body>
+</html>

@@ -1,0 +1,28 @@
+---
+// layouts import
+import Layout from "../layouts/MainLayout.astro";
+
+// components import
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+// styles
+import "../styles/global.css";
+
+const { frontmatter } = Astro.props;
+const { title, description, image } = frontmatter;
+---
+
+<Layout {title} {description}>
+ <Header title={title} coverPhoto={image.src} />
+ <div class="mt-8 max-w-4xl mx-auto">
+  <div class="flex">
+   <article
+    class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl mx-auto px-2"
+   >
+    <slot />
+   </article>
+  </div>
+ </div>
+ <Footer />
+</Layout>

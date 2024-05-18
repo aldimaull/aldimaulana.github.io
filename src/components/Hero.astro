@@ -1,0 +1,104 @@
+---
+import { Image } from 'astro:assets';
+import fotoSaya from "../images/fotoSaya.jpg";
+---
+
+<div
+ class="hero flex mx-auto flex-col items-center justify-center dark:text-on-surface-dark text-on-surface-light font-sans dark:bg-surface-dark bg-surface-light h-screen w-screen text-sm sm:text-lg md:text-xl max-w-[250px] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl duration-500"
+>
+ <div
+  class="flex text-center items-center font-bold uppercase dark:text-primary-dark text-primary-light tracking-[.5em]"
+ >
+  <span>Selamat Datang</span>
+ </div>
+ <img
+  class="mt-6 h-52 w-52 rounded-full"
+  src={fotoSaya.src}
+  alt="Foto Aldi Maulana"
+ />
+ <h1 class="mt-6 text-lg sm:text-3xl md:text-4xl text-center">
+  Halo👋, Saya{" "}
+  <span
+   class="animate-gradient bg-gradient-to-bl from-primary-light via-secondary-light to-tertiary-light dark:from-primary-dark dark:via-secondary-dark dark:to-tertiary-dark bg-[length:400%_400%] bg-clip-text font-bold text-transparent font-display"
+   style="font-feature-settings: 'ss02'"
+  >
+   Aldi Maulana
+  </span>
+ </h1>
+ <p class="mt-2 text-center">College Student & Learner.</p>
+ <div class="hero-nav flex my-4 justify-evenly w-full">
+  <a
+   href="/blog"
+   class="border border-outline-light dark:border-outline-dark dark:bg-surface-lowest-dark bg-surface-highest-light dark:hover:bg-surface-lowest-dark/50 hover:bg-surface-highest-light/50 px-3"
+  >
+   Blog
+  </a>
+  <a
+   href="/about"
+   class="border border-outline-light dark:border-outline-dark dark:bg-surface-lowest-dark bg-surface-highest-light dark:hover:bg-surface-lowest-dark/50 hover:bg-surface-highest-light/50 px-3"
+   >About</a
+  >
+  <a
+   href="/contact"
+   class="border border-outline-light dark:border-outline-dark dark:bg-surface-lowest-dark bg-surface-highest-light dark:hover:bg-surface-lowest-dark/50 hover:bg-surface-highest-light/50 px-3"
+   >Contact</a
+  >
+ </div>
+ <div class="w-full">
+  <div class="mt-2 flex justify-evenly gap-4">
+   <a
+    href="https://instagram.com/aldimaull/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="max-[320px]:text-[0.7rem]"
+   >
+    <span
+     class="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:hover:text-on-surface-dark dark:text-tertiary-dark underline underline-offset-4"
+     >instagram</span
+    >
+   </a>
+   <a
+    href="https://web.facebook.com/aldi.maulana.1420/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="max-[320px]:text-[0.7rem]"
+   >
+    <span
+     class="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:hover:text-on-surface-dark dark:text-tertiary-dark underline underline-offset-4"
+     >facebook</span
+    >
+   </a>
+   <a
+    href="https://t.me/maaaauuuullll/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="max-[320px]:text-[0.7rem]"
+   >
+    <span
+     class="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:hover:text-on-surface-dark dark:text-tertiary-dark underline underline-offset-4"
+     >telegram</span
+    >
+   </a>
+   <a
+    href="https://instagram.com/aldimaull/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="max-[320px]:text-[0.7rem]"
+   >
+    <span
+     class="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:hover:text-on-surface-dark dark:text-tertiary-dark underline underline-offset-4"
+     >linkedin</span
+    >
+   </a>
+  </div>
+ </div>
+</div>
+
+<style>
+ .hero-nav a {
+  @apply px-2 py-1 rounded-full;
+ }
+ .hero-nav a:hover {
+  @apply dark:bg-surface-low-dark bg-surface-low-light dark:text-on-surface-dark text-on-surface-light;
+ }
+</style>

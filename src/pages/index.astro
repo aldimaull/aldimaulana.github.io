@@ -1,0 +1,28 @@
+---
+// layouts import
+import Layout from "../layouts/LandingLayout.astro";
+
+// components import
+import Hero from "../components/Hero.astro";
+import ThemeIcon from "../components/ThemeIcon.astro";
+import ThemeMenu from "../components/ThemeMenu.astro";
+---
+
+<Layout title="Aldi Maulana" description="Aldi Maulana's Personal Website">
+ <div class="fixed top-0 right-0 p-4">
+  <ThemeIcon />
+ </div>
+ <div class="fixed top-0 right-16 p-4">
+  <ThemeMenu/>  
+ </div>
+ <Hero />
+</Layout>
+
+<script is:inline>
+ const isHeroPage = document.querySelector(".hero") !== null;
+ if (isHeroPage) {
+  const headerElement = document.querySelector("header");
+
+  headerElement.remove();
+ }
+</script>

@@ -1,0 +1,14 @@
+---
+const { relatedPosts } = Astro.props;
+---
+
+<section>
+ <p>Related Posts</p>
+ {
+  relatedPosts.map((post) => (
+   <a href={post.url} class="decoration-transparent">
+    {post.frontmatter.title}
+   </a>
+  ))
+ }
+</section>

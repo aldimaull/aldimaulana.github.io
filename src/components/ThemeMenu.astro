@@ -1,0 +1,56 @@
+---
+
+---
+
+<select
+  name="themeColor"
+  id="themeColor"
+  class="w-9/10 flex-wrap p-2 rounded-full border border-outline-light dark:border-outline-dark hover:bg-surface-high-light mx-2 text-center bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark mt-2 md:mt-0 md:text-[10px]"
+>
+</select>
+
+<style>
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
+    text-overflow: "";
+  }
+</style>
+
+<script is:inline>
+  const colors = [
+    { id: 1, name: "Default", ct: "theme-default" },
+    { id: 2, name: "Lavender", ct: "theme-purple" },
+    { id: 3, name: "Earthtone", ct: "theme-yellow" },
+    { id: 4, name: "Crimson", ct: "theme-red" },
+    { id: 5, name: "Cerulean", ct: "theme-blue" },
+  ];
+
+  const themeSelect = document.getElementById("themeColor");
+
+  colors.forEach((color) => {
+    const option = document.createElement("option");
+    option.value = color.ct;
+    option.textContent = color.name;
+    option.className =
+      "rounded-full py-2 cursor-pointer hover:bg-on-secondary-light dark:hover:bg-on-secondary-dark md:text-xs";
+    themeSelect.appendChild(option);
+  });
+
+  const savedTheme = localStorage.getItem("colorTheme");
+
+  document.body.classList.add(savedTheme);
+
+  themeSelect.value = savedTheme;
+
+  function setTheme(newTheme) {
+    document.body.classList.remove(...colors.map((color) => color.ct));
+    document.body.classList.add(newTheme);
+    localStorage.setItem("colorTheme", newTheme);
+  }
+
+  themeSelect.addEventListener("change", function (event) {
+    setTheme(event.target.value);
+  });
+</script>
