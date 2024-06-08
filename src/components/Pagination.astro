@@ -1,18 +1,19 @@
 ---
 const { prevUrl, nextUrl } = Astro.props;
+import "../styles/global.css";
 ---
 
 <nav>
   {
     prevUrl && (
-      <button class="p-2 rounded-full bg-tertiary-90 text-tertiary-10 dark:bg-tertiary-30 dark:text-tertiary-90 text-sm">
+      <button class="prevUrl p-2 rounded-full bg-tertiary-container-light text-on-tertiary-container-light dark:bg-tertiary-container-dark dark:text-on-tertiary-container-dark text-sm">
         <a href={prevUrl}>Sebelumnya</a>
       </button>
     )
   }
   {
     nextUrl && (
-      <button class="p-2 rounded-full bg-tertiary-90 text-tertiary-10 dark:bg-tertiary-30 dark:text-tertiary-90 text-sm">
+      <button class="nextUrl p-2 rounded-full bg-tertiary-container-light text-on-tertiary-container-light dark:bg-tertiary-container-dark dark:text-on-tertiary-container-dark text-sm">
         <a href={nextUrl}>Selanjutnya</a>
       </button>
     )
