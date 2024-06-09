@@ -5,6 +5,7 @@ import ThemeMenu from "./ThemeMenu.astro";
 ---
 
 <nav
+id="main-nav"
   class="md:sticky top-0 left-0 flex w-[88px] flex-col justify-between md:h-screen"
 >
   <div
@@ -13,7 +14,7 @@ import ThemeMenu from "./ThemeMenu.astro";
     <div class="btnNav text-center">
       <button
         ><a
-          href="/blog"
+          href="/blog/"
           class="normal-case flex flex-col-reverse text-xs hover:font-bold"
         >
           <span class="peer">Blog</span>
@@ -27,7 +28,7 @@ import ThemeMenu from "./ThemeMenu.astro";
     <div class="btnNav text-center">
       <button
         ><a
-          href="/about"
+          href="/about/"
           class="normal-case flex flex-col-reverse text-xs hover:font-bold"
         >
           <span class="peer">About</span>
@@ -41,7 +42,7 @@ import ThemeMenu from "./ThemeMenu.astro";
     <div class="btnNav text-center">
       <button
         ><a
-          href="/portfolio"
+          href="/portfolio/"
           class="normal-case flex flex-col-reverse text-xs hover:font-bold"
         >
           <span class="peer">Portfolio</span>
@@ -55,7 +56,7 @@ import ThemeMenu from "./ThemeMenu.astro";
     <div class="btnNav text-center">
       <button
         ><a
-          href="/project"
+          href="/project/"
           class="normal-case flex flex-col-reverse text-xs hover:font-bold"
         >
           <span class="peer">Project</span>
@@ -69,7 +70,7 @@ import ThemeMenu from "./ThemeMenu.astro";
     <div class="btnNav text-center">
       <button
         ><a
-          href="/contact"
+          href="/contact/"
           class="normal-case flex flex-col-reverse text-xs hover:font-bold"
         >
           <span class="peer">Contact</span>
@@ -150,12 +151,43 @@ import ThemeMenu from "./ThemeMenu.astro";
 
 <script is:inline>
   const activePage = window.location.pathname;
-  const navLinks = document.querySelectorAll("nav a").forEach((link) => {
-    if (link.href.includes(`${activePage}`)) {
-      link.querySelector(".material-symbols-rounded").classList.add("active");
-      link.querySelector(".peer").classList.add("font-extrabold");
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach((link) => {
+    const linkPath = new URL(link.href).pathname;
+    console.log(linkPath);
+
+    if (activePage.startsWith(linkPath)) {
+    const icon = link.querySelector(".material-symbols-rounded");
+    const peer = link.querySelector(".peer");
+    
+    if (icon) {
+      icon.classList.add("active");
     }
+
+    if (peer) {
+      peer.classList.add("font-extrabold");
+    }
+  }
   });
+
+
+
+
+  // const btnContainer = document.getElementById("main-nav");
+  // const btns = btnContainer.getElementsByClassName("btnNav");
+
+  // for(let i = 0; i < btns.length; i++){
+  //   btns[i].addEventListener("click", function(){
+  //     let current = document.getElementsByClassName("active");
+
+  //     if(current.length > 0){
+  //       current[0].className = current[0].className.replace(" active","");
+  //     }
+
+  //     this.className += " active";
+  //   })
+  // }
 </script>
 
 <style>
