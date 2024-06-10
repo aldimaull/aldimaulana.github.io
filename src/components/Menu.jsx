@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-// import { ThemeIcon } from "./ThemeIcon.astro";
+import { menus } from "../lib/data";
+import ThemeIcon from "./ThemeIcon.astro";
+import ThemeMenu from "./ThemeMenu.astro";
 
 const Menu = () => {
   const [nav, setNav] = useState(false);
@@ -55,23 +57,13 @@ const Menu = () => {
           )}
         </div>
         <div className="flex flex-col uppercase">
-          <a href="/blog" className=" p-4 pt-4">
-            <span>Blog</span>
-          </a>
-          <a href="/about" className=" p-4">
-            <span>About</span>
-          </a>
-          <a href="/portfolio" className=" p-4">
-            <span>Portfolio</span>
-          </a>
-          <a href="/project" className=" p-4">
-            <span>Project</span>
-          </a>
-          <a href="/contact" className=" p-4 ">
-            <span>Contact</span>
-          </a>
+          {menus.map((menu) => (
+            <a key={menu.id} href={menu.href} className=" p-4 pt-4">
+              <span>{menu.nama}</span>
+            </a>
+          ))}
           <span className="end:0 dark:inline m-4">{/* <ThemeIcon /> */}</span>
-          <span className="dark:inline end:0 mx-4"></span>
+          <span className="dark:inline end:0 mx-4">{/* <ThemeMenu /> */}</span>
         </div>
       </motion.div>
     </>
